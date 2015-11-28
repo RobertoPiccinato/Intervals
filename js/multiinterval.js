@@ -24,9 +24,9 @@ function MultiInterval(callback, intervals) {
     
     if(self.cleared) return;
     
-    setTimeout(callback, self.intervals[i]);
+    setTimeout(callback, self.intervals[index]);
     
-    setTimeout(self.runner, self.interval[i], self, i);
+    setTimeout(self.runner, self.intervals[index], self, index);
   };
   
   for(var i = 0; i < this.intervals.length; i++) {
